@@ -1,0 +1,191 @@
+
+body
+  background: #F5F5F5
+  font-family: sans-serif
+*
+  transition: color, opacity .2s
+
+.container
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-content: center
+  align-items: center
+  justify-items: center
+  width: 90%
+  max-width: 500px
+  // border 1px solid
+  margin auto
+
+
+.heading h1
+  font-size: 100px
+  margin: .2em
+  font-weight: lighter
+  font-family: sans-serif
+  color #EAD7D7
+
+.tasks
+  background: #FEFEFE
+  width: 100%
+  // width: 90%
+  // max-width: 500px
+  // box-shadow: 0 3em 4em black
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e6e6e6
+
+.tasks .header
+  display flex
+  align-items: baseline
+  .checkAll .input
+      display none
+  .checkAll .label
+    padding 1em
+    height 100%
+    width 100%
+    cursor: pointer
+  .checkAll .input + .label:before
+    content: '☐'
+  .checkAll .input:checked + .label:before
+    content: '🗹'
+
+  > .input
+    flex-grow: 10
+    .form, .input
+      display flex
+      flex-grow: 10
+    .input
+      border: none
+      padding: 1em
+      padding-left: .5em
+      font-size: 1.2em
+      &::placeholder
+        font-style: italic
+        color #D9D9D9
+
+  border-bottom: 2px solid #e6e6e6
+  // box-shadow: 0 1px 1px black
+
+.taskList
+  // .task:not(:last-child)
+  .taskWrapper
+    border-bottom: 1px solid #e6e6e6
+    display flex
+    align-items: baseline
+    .checkbox .input
+        display none
+    .checkbox .label
+      padding 1em
+      height 100%
+      width 100%
+      cursor: pointer
+    .checkbox .input + .label:before
+      content: '☐'
+    .checkbox .input:checked + .label:before
+      content: '🗹'
+  .task
+    flex-grow: 10
+    .form, .input
+      display flex
+      flex-grow: 10
+    .input
+      padding: 1.3em
+    .input, .text
+      border: none
+      // padding: 1em
+      padding-left: .5em
+    .text
+      border: none
+      padding: 1em
+      padding-left: .5em
+  .editing .checkbox
+    visibility hidden
+  .button
+    border none
+    background transparent
+    padding 1em
+    cursor: pointer
+    opacity: 0
+    color #aaa
+    // font-size: 1.3em
+  .taskWrapper:hover .button
+    opacity: 1
+  .taskWrapper:hover .button:hover
+    color black
+
+.completed:not(.editing)
+  .text
+    text-decoration: line-through
+  opacity .5
+
+.view-active .taskWrapper.completed
+  display none
+
+.view-completed .taskWrapper:not(.completed)
+  display none
+
+.footer
+  // border 1px solid
+  display flex
+  width 100%
+  justify-content: space-between;
+  align-items: baseline
+  background: #FEFEFE
+  .toggleView
+    display flex
+  position relative
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1)
+  > *
+    padding .5em
+  &:before
+  &:after
+    content ' '
+    display block
+    width: 100%
+    height 1em
+    background: white
+    // background: #FEFEFE
+    position absolute
+    // position relative
+    left 100
+    bottom -4px
+    width 98%
+    left: 1%
+    z-index -1
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1)
+  &:after
+    // background blue
+    bottom -8px
+    width 96%
+    left: 2%
+    z-index -2
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1)
+  .clearCompleted
+    border: none
+    background: transparent
+    &:hover
+      cursor: pointer
+      text-decoration: underline
+
+.toggleView
+  .input
+    display none
+  .label
+    border-radius: .2em
+    margin .2em
+    padding .3em
+    cursor pointer
+  .label
+    border 1px solid transparent
+  .active .label
+    border 1px solid #EFD5D5
+  &:hover .label
+  &:hover .active .label
+    border 1px solid transparent
+  .active .label
+  .label:hover
+  &:hover .label:hover
+    border 1px solid #EFD5D5
+
+.hidden
+  visibility hidden

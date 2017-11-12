@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`basic snapshot 1`] = `
+<div class="view-all container div">
+  <div class="heading div">
+    <div class="header div">todos</div>
+  </div>
+  <div class="tasks div">
+    <div class="header div">
+      <div class="checkAll div">
+        <div class="div">
+          <input
+            id="checkAll"
+            type="checkbox"
+            checked={0}
+            onchange={[Function onchange]}
+            class="input"
+           />
+          <label
+            for="checkAll"
+            class="label"
+          >
+          </label>
+        </div>
+      </div>
+      <div class="input div">
+        <form
+          onsubmit={[Function onsubmit]}
+          class="newTaskInput form"
+        >
+          <input
+            value=""
+            placeholder="What needs to be done?"
+            class="input"
+           />
+        </form>
+      </div>
+    </div>
+    <div class="taskList div"></div>
+  </div>
+  <div class="footer div">
+    <div class="footer div">
+      <div class="itemsLeft div">0 items left</div>
+      <div class="toggleView div">
+        <div class="div">
+          <input
+            type="radio"
+            name="toggle-view"
+            value="all"
+            id="toggle-view-all"
+            onclick={[Function onclick]}
+            checked={true}
+            class="input"
+           />
+          <label
+            for="toggle-view-all"
+            class="label"
+          >
+            all
+          </label>
+        </div>
+        <div class="div">
+          <input
+            type="radio"
+            name="toggle-view"
+            value="active"
+            id="toggle-view-active"
+            onclick={[Function onclick]}
+            checked={false}
+            class="input"
+           />
+          <label
+            for="toggle-view-active"
+            class="label"
+          >
+            active
+          </label>
+        </div>
+        <div class="div">
+          <input
+            type="radio"
+            name="toggle-view"
+            value="completed"
+            id="toggle-view-completed"
+            onclick={[Function onclick]}
+            checked={false}
+            class="input"
+           />
+          <label
+            for="toggle-view-completed"
+            class="label"
+          >
+            completed
+          </label>
+        </div>
+      </div>
+      <div class="hidden div">
+        <button
+          onclick={[Function onclick]}
+          class="clearCompleted button"
+        >
+          Clear completed
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
